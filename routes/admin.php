@@ -11,6 +11,10 @@ Route::group(['prefix' => 'admin'],function (){
             return view('admin.dashboard');
         })->name('admin.dashboard');
 
+        // website setting routes
+        Route::get('/settings', 'Admin\SettingController@index')->name('admin.settings');
+        Route::post('/settings', 'Admin\SettingController@update')->name('admin.settings.update');
+
     });
 });
 
