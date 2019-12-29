@@ -18,6 +18,15 @@ Route::group(['prefix' => 'admin'],function (){
         //category route
         Route::resource('category','Admin\CategoryController',['names' => 'admin.category']);
 
+        //attribute route
+        Route::resource('attribute','Admin\AttributeController',['names' => 'admin.attribute']);
+
+        //attribute value route
+        Route::post('attributes/get-values', 'Admin\AttributeValueController@getValues');
+        Route::post('attributes/add-values', 'Admin\AttributeValueController@addValues');
+        Route::post('attributes/update-values', 'Admin\AttributeValueController@updateValues');
+        Route::post('attributes/delete-values', 'Admin\AttributeValueController@deleteValues');
+
     });
 });
 
