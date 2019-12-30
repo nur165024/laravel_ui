@@ -15,15 +15,24 @@
         <div class="col-md-3">
             <div class="tile p-0">
                 <ul class="nav flex-column nav-tabs user-tabs">
-                    <li class="nav-item"><a class="nav-link active" href="#general" data-toggle="tab">General</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#images" data-toggle="tab">Images</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#general" data-toggle="tab">General</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#images" data-toggle="tab">Images</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#attributes" data-toggle="tab">Attributes</a>
+                    </li>
+
                 </ul>
             </div>
         </div>
         <div class="col-md-9">
             <div class="tab-content">
                 <div class="tab-pane active" id="general">
-
                     <div class="tile">
                         <form action="{{ route('admin.product.update', $product->id) }}" method="POST" role="form">
                             @csrf
@@ -199,6 +208,7 @@
                         </form>
                     </div>
                 </div>
+
                 <div class="tab-pane" id="images">
                     <div class="tile">
                         <h3 class="tile-title">Upload Image</h3>
@@ -239,6 +249,10 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="tab-pane" id="attributes">
+                    <product-attributes :productid="{{ $product->id }}"></product-attributes>
+                </div>
             </div>
         </div>
     </div>
@@ -250,6 +264,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js"></script>
 
     <script type="text/javascript" src="{{ asset('assets/admin/js/plugins/bootstrap-notify.min.js') }}"></script>
+
+    <script type="text/javascript" src="{{ asset('assets/admin/js/app.js') }}"></script>
 
     <script>
         Dropzone.autoDiscover = false;
