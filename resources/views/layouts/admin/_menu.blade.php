@@ -25,6 +25,14 @@
         </li>
 
         <li>
+            <a class="app-menu__item {{ Route::currentRouteName() == 'admin.product.index' ? 'active' : '' }}"
+               href="{{ route('admin.product.index') }}">
+                <i class="app-menu__icon fa fa-shopping-bag"></i>
+                <span class="app-menu__label">Product</span>
+            </a>
+        </li>
+
+        <li>
             <a class="app-menu__item {{ Route::currentRouteName() == 'admin.attribute.index' ? 'active' : '' }}"
                href="{{ route('admin.attribute.index') }}">
                 <i class="app-menu__icon fa fa-th"></i>

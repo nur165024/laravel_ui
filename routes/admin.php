@@ -30,6 +30,13 @@ Route::group(['prefix' => 'admin'],function (){
         //brands routes
         Route::resource('brand','Admin\BrandController',['names' => 'admin.brand']);
 
+        //product routes
+        Route::resource('product','Admin\ProductController',['names' => 'admin.product']);
+
+        //image upload
+        Route::post('images/upload', 'Admin\ProductImageController@upload')->name('admin.products.images.upload');
+        Route::get('images/{id}/delete', 'Admin\ProductImageController@delete')->name('admin.products.images.delete');
+
     });
 });
 
