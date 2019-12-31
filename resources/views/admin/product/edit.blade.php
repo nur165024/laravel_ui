@@ -34,8 +34,11 @@
             <div class="tab-content">
                 <div class="tab-pane active" id="general">
                     <div class="tile">
-                        <form action="{{ route('admin.product.update', $product->id) }}" method="POST" role="form">
+                        <form action="{{ route('admin.product.update',$product->id) }}" method="POST" role="form">
+
                             @csrf
+                            @method('put')
+
                             <h3 class="tile-title">Product Information</h3>
                             <hr>
                             <div class="tile-body">
@@ -47,7 +50,7 @@
                                         placeholder="Enter attribute name"
                                         id="name"
                                         name="name"
-                                        value="{{ old('name', $product->name) }}"
+                                        value="{{ old('name',$product->name) }}"
                                     />
                                     <input type="hidden" name="product_id" value="{{ $product->id }}">
                                     <div class="invalid-feedback active">
@@ -194,6 +197,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="tile-footer">
                                 <div class="row d-print-none mt-2">
                                     <div class="col-12 text-right">

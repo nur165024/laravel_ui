@@ -79,5 +79,4 @@ class ProductController extends BaseController
         return $this->responseRedirect('admin.product.index', 'Product updated successfully' ,'success',false, false);
     }
 
-
 }
