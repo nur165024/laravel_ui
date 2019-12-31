@@ -1,5 +1,118 @@
 @extends('layouts.site.master')
 
+@section('banner')
+    <div class="row">
+        <div class="col-md-9">
+            <!-- ================= main slide ================= -->
+            <div class="owl-init slider-main owl-carousel" data-items="1" data-dots="false" data-nav="true">
+                <div class="item-slide">
+                    <img src="images/banners/slide1.jpg">
+                </div>
+                <div class="item-slide rounded">
+                    <img src="images/banners/slide2.jpg">
+                </div>
+                <div class="item-slide rounded">
+                    <img src="images/banners/slide3.jpg">
+                </div>
+            </div>
+            <!-- ============== main slidesow .end // ============= -->
+        </div>
+        <!-- col.// -->
+        <div class="col-md-3">
+            <div class="card mt-2 mb-2">
+                <figure class="itemside">
+                    <div class="aside">
+                        <div class="img-wrap img-sm border-right"><img src="images/items/3.jpg"></div>
+                    </div>
+                    <figcaption class="p-3">
+                        <h6 class="title"><a href="#">Some name of item goes here nice</a></h6>
+                        <div class="price-wrap">
+                            <span class="price-new b">$1280</span>
+                            <del class="price-old text-muted">$1980</del>
+                        </div>
+                        <!-- price-wrap.// -->
+                    </figcaption>
+                </figure>
+            </div>
+            <!-- card.// -->
+            <div class="card mb-2">
+                <figure class="itemside">
+                    <div class="aside">
+                        <div class="img-wrap img-sm border-right"><img src="images/items/3.jpg"></div>
+                    </div>
+                    <figcaption class="p-3">
+                        <h6 class="title"><a href="#">Some name of item goes here nice</a></h6>
+                        <div class="price-wrap">
+                            <span class="price-new b">$1280</span>
+                            <del class="price-old text-muted">$1980</del>
+                        </div>
+                        <!-- price-wrap.// -->
+                    </figcaption>
+                </figure>
+            </div>
+            <!-- card.// -->
+            <div class="card mb-2">
+                <figure class="itemside">
+                    <div class="aside">
+                        <div class="img-wrap img-sm border-right"><img src="images/items/3.jpg"></div>
+                    </div>
+                    <figcaption class="p-3">
+                        <h6 class="title"><a href="#">Some name of item goes here nice</a></h6>
+                        <div class="price-wrap">
+                            <span class="price-new b">$1280</span>
+                            <del class="price-old text-muted">$1980</del>
+                        </div>
+                        <!-- price-wrap.// -->
+                    </figcaption>
+                </figure>
+            </div>
+            <!-- card.// -->
+        </div>
+        <!-- col.// -->
+    </div>
+@endsection
+
+@section('featured_category')
+    <header class="section-heading heading-line">
+        <h4 class="title-section bg">Featured Categories</h4>
+    </header>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card-banner" style="height:250px; background-image: url('images/posts/1.jpg');">
+                <article class="overlay overlay-cover d-flex align-items-center justify-content-center">
+                    <div class="text-center">
+                        <h5 class="card-title">Primary text as title</h5>
+                        <a href="#" class="btn btn-warning btn-sm"> View All </a>
+                    </div>
+                </article>
+            </div>
+            <!-- card.// -->
+        </div>
+        <div class="col-md-4">
+            <div class="card-banner" style="height:250px; background-image: url('images/posts/2.jpg');">
+                <article class="overlay overlay-cover d-flex align-items-center justify-content-center">
+                    <div class="text-center">
+                        <h5 class="card-title">Primary text as title</h5>
+                        <a href="#" class="btn btn-warning btn-sm"> View All </a>
+                    </div>
+                </article>
+            </div>
+            <!-- card.// -->
+        </div>
+        <div class="col-md-4">
+            <div class="card-banner" style="height:250px; background-image: url('images/posts/3.jpg');">
+                <article class="overlay overlay-cover d-flex align-items-center justify-content-center">
+                    <div class="text-center">
+                        <h5 class="card-title">Primary text as title</h5>
+                        <a href="#" class="btn btn-warning btn-sm"> View All </a>
+                    </div>
+                </article>
+            </div>
+            <!-- card.// -->
+        </div>
+    </div>
+@endsection
+
 @section('content')
     <section class="section-content padding-y-sm bg">
         <div class="container">
@@ -368,6 +481,31 @@
                 <!-- col // -->
             </div>
             <!-- row.// -->
+        </div>
+        <!-- container // -->
+    </section>
+@endsection
+
+@section('subscribe')
+    <section class="section-subscribe bg-primary padding-y-lg">
+        <div class="container">
+            <p class="pb-2 text-center white">Delivering the latest product trends and industry news straight to your inbox</p>
+            <div class="row justify-content-md-center">
+                <div class="col-lg-4 col-sm-6">
+                    <form class="row-sm form-noborder">
+                        <div class="col-8">
+                            <input class="form-control" placeholder="Your Email" type="email">
+                        </div>
+                        <!-- col.// -->
+                        <div class="col-4">
+                            <button type="submit" class="btn btn-block btn-warning"> <i class="fa fa-envelope"></i> Subscribe </button>
+                        </div>
+                        <!-- col.// -->
+                    </form>
+                    <small class="form-text text-white-50">We’ll never share your email address with a third-party. </small>
+                </div>
+                <!-- col-md-6.// -->
+            </div>
         </div>
         <!-- container // -->
     </section>

@@ -103,4 +103,5 @@ class AttributeRepository extends BaseRepository implements AttributeContract
 
         return $attribute;
     }
+
 }

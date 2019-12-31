@@ -20,14 +20,14 @@
 <!-- ========================= SECTION MAIN ========================= -->
 <section class="section-main bg padding-top-sm">
     <div class="container">
-        @include('layouts.site._banner')
+        @yield('banner')
     </div>
 </section>
 <!-- ========================= SECTION MAIN END// ========================= -->
 <!-- ========================= Blog ========================= -->
 <section class="section-content padding-y-sm bg">
     <div class="container">
-        @include('layouts.site._featured_category')
+        @yield('featured_category')
     </div>
 </section>
 <!-- ========================= Blog .END// ========================= -->
@@ -37,12 +37,7 @@
 <!-- ========================= SECTION CONTENT ========================= -->
 
 <!-- ========================= Subscribe ========================= -->
-<section class="section-subscribe bg-primary padding-y-lg">
-    <div class="container">
-        @include('layouts.site._subscribe')
-    </div>
-    <!-- container // -->
-</section>
+@yield('subscribe')
 <!-- ========================= Subscribe .END// ========================= -->
 
 <!-- ========================= FOOTER ========================= -->
